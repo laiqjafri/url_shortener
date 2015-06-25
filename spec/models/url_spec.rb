@@ -9,6 +9,10 @@ RSpec.describe Url, type: :model do
     url = Url.create
     expect(url.valid?).to be false
     expect(Url.count).to eq 0
+
+    url = Url.create :url => "http://"
+    expect(url.valid?).to be false
+    expect(Url.count).to eq 0
   end
 
   it "will test an invalid url" do
@@ -39,5 +43,10 @@ RSpec.describe Url, type: :model do
     url = Url.create :url => "http://l@iq.com"
     expect(Url.count).to eq 1
     expect(Url.first.key.present?).to be true
+  end
+
+  it "will test shortened_url" do
+    url = Url.create :url => "http://l@iq.com"
+    expect(url.shortened_url).to eq (File.join(Rails.application.config.base_url, url.key))
   end
 end
