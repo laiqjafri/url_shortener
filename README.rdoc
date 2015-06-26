@@ -10,12 +10,12 @@ Bugs:: {Issues}[http://github.com/laiqjafri/url_shortener/issues]
   2.2.0
 
 == Database
-  SQLite
+  SQLite3
 
 == Installation
 
 Make sure you are using ruby version 2.2.0. And you have bundler installed.
-Follow following set of commands to set this rails project up on your local:
+Go through the following commands to set this rails project up on your local:
   git clone https://github.com/laiqjafri/url_shortener.git
   cd url_shortener
 If you are using {RVM}[https://rvm.io/], the 'cd' command will automatically create a gemset for this app. Now install the required gems:
@@ -27,5 +27,5 @@ And, initialize the database (See, if you need any changes in config/database.ym
 Start the server:
   rails s -p 3000
 
-Fire up the browser and go to http://localhost:3000/. If your local server address is different, then change the base_url config in development.rb accordingly.
+Fire up the browser and go to http://localhost:3000. If your local server address is different, then change the 'base_url' config in config/environments/development.rb accordingly.
 
