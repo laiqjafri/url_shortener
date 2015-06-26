@@ -1,4 +1,4 @@
 <tr>
-  <td><%= url_row.url %></td>
+  <td><%= link_to url_row.url.truncate(100), url_row.url %></td>
   <td><%= link_to url_row.shortened_url, url_row.shortened_url, :target => '_blank' %></td>
 </tr>
