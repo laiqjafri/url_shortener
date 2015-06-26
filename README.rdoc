@@ -29,3 +29,7 @@ Start the server:
 
 Fire up the browser and go to http://localhost:3000. If your local server address is different, then change the 'base_url' config in config/environments/development.rb accordingly.
 
+
+== Tests
+Go into the project root directory, and run
+  bundle exec rspec
