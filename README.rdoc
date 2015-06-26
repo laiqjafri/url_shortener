@@ -1,28 +1,31 @@
-== README
+= URL Shortener
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A rails app to shorten URLs
 
-Things you may want to cover:
+Author:: Laiq Jafri
+Info:: {URL Shortener}[http://github.com/laiqjafri/url_shortener]
+Bugs:: {Issues}[http://github.com/laiqjafri/url_shortener/issues]
 
-* Ruby version
+== Ruby Version
+  2.2.0
 
-* System dependencies
+== Database
+  SQLite
 
-* Configuration
+== Installation
 
-* Database creation
+Make sure you are using ruby version 2.2.0. And you have bundler installed.
+Follow following set of commands to set this rails project up on your local:
+  git clone https://github.com/laiqjafri/url_shortener.git
+  cd url_shortener
+If you are using {RVM}[https://rvm.io/], the 'cd' command will automatically create a gemset for this app. Now install the required gems:
+  bundle install
+And, initialize the database (See, if you need any changes in config/database.yml file to access the database)
+  bundle exec rake db:create
+  bundle exec rake db:migrate
 
-* Database initialization
+Start the server:
+  rails s -p 3000
 
-* How to run the test suite
+Fire up the browser and go to http://localhost:3000/. If your local server address is different, then change the base_url config in development.rb accordingly.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
